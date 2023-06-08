@@ -306,8 +306,11 @@ export class ChatGPTBot {
     } else if (rawText === '啊？') {
       await message.say('啊？')
       return;
-    } else if (rawText === '哦？'||'唉') {
+    } else if (rawText === '哦') {
       await message.say(rawText)
+      return;
+    } else if (rawText === '唉') {
+      await message.say('唉')
       return;
     } else if (rawText === '6') {
       await message.say('6')
