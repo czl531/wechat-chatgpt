@@ -327,13 +327,17 @@ export class ChatGPTBot {
 	    	message.say(FileBox.fromUrl(json.data))
 	})
       return;
-    }else if (rawText === '好无聊啊') {
-	await fetch('https://api.qqsuu.cn/api/dm-xjj?type=json')
+    }else if (rawText === '舔狗日记') {
+	await fetch('https://api.oick.cn/dog/api.php?type=json')
 	.then(response =>{
     		return response.json();
 	}).then(json=>{
-    		console.log(json.video)
-	    	message.say(FileBox.fromUrl(json.video))
+    		console.log(json)
+	    	message.say(json)
+	})
+      return;
+    }else if (rawText === '好无聊啊') {
+	await message.say(FileBox.fromUrl('https://api.shserve.cn/api/xjj?mp4=shanhai'))
 	})
       return;
     }  else {
