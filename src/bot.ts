@@ -234,22 +234,7 @@ export class ChatGPTBot {
     const room = message.room();
     const messageType = message.type();
     const privateChat = !room;
-    //自定义
     
-
-    if (rawText === '？') {
-      await message.say('？')
-      return;
-    } else if (rawText === '？？？') {
-      await message.say('？？？')
-      return;
-    } else if (rawText === '啊？') {
-      await message.say('啊？')
-      return;
-    } else if (rawText === '哦？') {
-      await message.say('哦？')
-      return;
-    }
     
     
     if (privateChat) {
@@ -312,6 +297,22 @@ export class ChatGPTBot {
         }
       }
     } else {
+      return;
+    }
+    //自定义
+    
+
+    if (rawText === '？') {
+      await message.say('？')
+      return;
+    } else if (rawText === '？？？') {
+      await message.say('？？？')
+      return;
+    } else if (rawText === '啊？') {
+      await message.say('啊？')
+      return;
+    } else if (rawText === '哦？') {
+      await message.say('哦？')
       return;
     }
   }
