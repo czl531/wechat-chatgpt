@@ -324,7 +324,7 @@ export class ChatGPTBot {
     		return response.json();
 	}).then(json=>{
     		console.log(json.data)
-	    message.say(FileBox.fromUrl(Json.parse(json.data))) 
+	    message.say(FileBox.fromUrl(JSON.parse(json.data))) 
 	})
 	     
       return;
