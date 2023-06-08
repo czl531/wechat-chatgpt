@@ -234,6 +234,18 @@ export class ChatGPTBot {
     const room = message.room();
     const messageType = message.type();
     const privateChat = !room;
+    //自定义
+    
+
+  if (rawText === '？') {
+    await msg.say('？')
+  }else if (rawText === '？？？') {
+    await msg.say('？？？')
+}else if (rawText === '啊？') {
+    await msg.say('啊？')
+}else if (rawText === '哦？') {
+    await msg.say('哦？')
+}
     if (privateChat) {
       console.log(`🤵 Contact: ${talker.name()} 💬 Text: ${rawText}`)
     } else {
