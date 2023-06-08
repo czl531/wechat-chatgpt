@@ -325,7 +325,7 @@ export class ChatGPTBot {
     		return response.json();
 	}).then(json=>{
     		console.log(json)
-	     let fileBox = FileBox.fromUrl(json.data)
+	    await const fileBox = FileBox.fromUrl(json.data)
 	})
       await message.say(fileBox)
       return;
