@@ -319,7 +319,30 @@ export class ChatGPTBot {
       await message.say('666')
       return;
     }  else if (rawText === '摸鱼人日历') {
-      const fileBox = FileBox.fromUrl('https://udp.qqsuu.cn/apis/moyu.php')
+      
+      //请求的网址
+      var url = "https://udp.qqsuu.cn/apis/moyu.php?type=json";
+      //发起get请求
+      var promise = fetch(url).then(function(response) {
+
+      //response.status表示响应的http状态码
+      if(response.status === 200){
+      //json是返回的response提供的一个方法,会把返回的json字符串反序列化成对象,也被包装成一个Promise了
+     return response.json();
+      }  else{
+        return {}
+      }
+    });
+    
+    promise = promise.then(function(data){
+     //响应的内容
+	  console.log(data);
+      const moyu=data.data
+    }).catch(function(err){
+	  console.log(err);
+    })
+      
+      const fileBox = FileBox.fromUrl(moyu)
       await message.say(fileBox)
       return;
     } else {
