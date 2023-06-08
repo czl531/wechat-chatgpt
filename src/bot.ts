@@ -328,8 +328,13 @@ export class ChatGPTBot {
 	})
       return;
     }else if (rawText === '好无聊啊') {
-	const fileBox = FileBox.fromUrl('https://api.qqsuu.cn/api/dm-douyinhot')
-       	await message.say(fileBox)
+	await fetch('https://api.qqsuu.cn/api/dm-xjj?type=json')
+	.then(response =>{
+    		return response.json();
+	}).then(json=>{
+    		console.log(json.video)
+	    	message.say(FileBox.fromUrl(json.video))
+	})
       return;
     }  else {
       return;
