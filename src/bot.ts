@@ -297,7 +297,7 @@ export class ChatGPTBot {
         }
       }
     } //自定义
-    if (rawText === '？') {
+    if (rawText === '？) {
       await message.say('？')
       return;
     } else if (rawText === '？？？') {
@@ -306,8 +306,14 @@ export class ChatGPTBot {
     } else if (rawText === '啊？') {
       await message.say('啊？')
       return;
-    } else if (rawText === '哦？') {
-      await message.say('哦？')
+    } else if (rawText === '哦？'||'唉') {
+      await message.say(rawText)
+      return;
+    } else if (rawText === '6') {
+      await message.say('6')
+      return;
+    }  else if (rawText === '666') {
+      await message.say('666')
       return;
     } else {
       return;
