@@ -341,7 +341,7 @@ export class ChatGPTBot {
 	    .then(response =>{
     		return response.json();
 	}).then(json=>{
-		//let encode_url = encodeURI(url1)
+		//let encode_url = encodeURI(json.mp4)
 		const mm = 'https:'+json.mp4
 		console.log(mm)
 	    	message.say(FileBox.fromUrl(mm))
