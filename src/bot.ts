@@ -327,7 +327,7 @@ export class ChatGPTBot {
 	    	message.say(FileBox.fromUrl(json.data))
 	})
       return;
-    }else if (rawText === '舔狗日记') {
+    }else if (rawText === '舔他') {
 	await fetch('https://api.oick.cn/dog/api.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -337,10 +337,25 @@ export class ChatGPTBot {
 	})
       return;
     }else if (rawText === '好无聊啊') {
-	await message.say(FileBox.fromUrl('https://api.shserve.cn/api/xjj?mp4=shanhai'))
+	await fetch('https://v.api.aa1.cn/api/api-girl-11-02/index.php?type=json')
+	.then(response =>{
+    		return response.json();
+	}).then(json=>{
+    		console.log(json)
+	    	message.say(FileBox.fromUrl(json.mp4))
+	}) 
       return;
-    }  else {
+    } else if (rawText === '来点疯狂星期四') {
+	await fetch('https://api.jixs.cc/api/wenan-fkxqs/index.php?type=json')
+	.then(response =>{
+    		return response.json();
+	}).then(json=>{
+    		console.log(json)
+	    	message.say(json[0].kfc)
+	})
       return;
+    } else {
+    	return
     }
   }
 }
