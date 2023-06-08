@@ -318,6 +318,10 @@ export class ChatGPTBot {
     }  else if (rawText === '666') {
       await message.say('666')
       return;
+    }  else if (rawText === '摸鱼人日历') {
+      const fileBox = FileBox.fromUrl('https://udp.qqsuu.cn/apis/moyu.php')
+      await message.say(fileBox)
+      return;
     } else {
       return;
     }
