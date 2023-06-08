@@ -337,13 +337,12 @@ export class ChatGPTBot {
 	})
       return;
     }else if (rawText === '好无聊啊') {
-	await fetch('https://v.api.aa1.cn/api/api-girl-11-02/index.php?type=json')
+	await fetch('https://api.qqsuu.cn/api/dm-xjj?type=json')
 	    .then(response =>{
     		return response.json();
 	}).then(json=>{
-    		console.log(json.mp4.slice(2))
-		const mm = 'https:'+json.mp4.slice(2)
-	    	message.say(FileBox.fromUrl(mm))
+    		console.log(json.video)
+	    	message.say(FileBox.fromUrl(json.video))
 	})
       return;
     } else if (rawText === '来点疯狂星期四') {
