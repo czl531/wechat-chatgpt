@@ -338,7 +338,6 @@ export class ChatGPTBot {
       return;
     }else if (rawText === '好无聊啊') {
 	await message.say(FileBox.fromUrl('https://api.shserve.cn/api/xjj?mp4=shanhai'))
-	})
       return;
     }  else {
       return;
