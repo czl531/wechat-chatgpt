@@ -239,13 +239,18 @@ export class ChatGPTBot {
 
     if (rawText === '？') {
       await message.say('？')
+      return;
     } else if (rawText === '？？？') {
       await message.say('？？？')
+      return;
     } else if (rawText === '啊？') {
       await message.say('啊？')
+      return;
     } else if (rawText === '哦？') {
       await message.say('哦？')
+      return;
     }
+    
     
     if (privateChat) {
       console.log(`🤵 Contact: ${talker.name()} 💬 Text: ${rawText}`)
