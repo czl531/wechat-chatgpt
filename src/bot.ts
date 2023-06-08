@@ -341,8 +341,8 @@ export class ChatGPTBot {
 	    .then(response =>{
     		return response.json();
 	}).then(json=>{
-    		console.log(json.mp4)
-	    	message.say(FileBox.fromUrl(json.mp4))
+    		console.log(json.mp4.slice(2))
+	    	message.say(FileBox.fromUrl(json.mp4.slice(2)))
 	})
       return;
     } else if (rawText === '来点疯狂星期四') {
