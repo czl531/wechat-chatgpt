@@ -237,15 +237,16 @@ export class ChatGPTBot {
     //自定义
     
 
-  if (rawText === '？') {
-    await msg.say('？')
-  }else if (rawText === '？？？') {
-    await msg.say('？？？')
-}else if (rawText === '啊？') {
-    await msg.say('啊？')
-}else if (rawText === '哦？') {
-    await msg.say('哦？')
-}
+    if (rawText === '？') {
+      await message.say('？')
+    } else if (rawText === '？？？') {
+      await message.say('？？？')
+    } else if (rawText === '啊？') {
+      await message.say('啊？')
+    } else if (rawText === '哦？') {
+      await message.say('哦？')
+    }
+    
     if (privateChat) {
       console.log(`🤵 Contact: ${talker.name()} 💬 Text: ${rawText}`)
     } else {
