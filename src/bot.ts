@@ -318,7 +318,7 @@ export class ChatGPTBot {
     }  else if (rawText === '666') {
       await message.say('666')
       return;
-    }  else if (rawText === '摸鱼人日历') {
+    }  	else if (rawText === '摸鱼人日历') {
      await fetch('https://udp.qqsuu.cn/apis/moyu.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -327,7 +327,7 @@ export class ChatGPTBot {
 	    	message.say(FileBox.fromUrl(json.data))
 	})
       return;
-    } else if (rawText === '舔一下') {
+    } 	else if (rawText === '舔一下') {
 	await fetch('https://api.oick.cn/dog/api.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -336,18 +336,27 @@ export class ChatGPTBot {
 	    	message.say(json)
 	})
       return;
-    } else if (rawText === '好无聊啊') {
-	await fetch('https://v.api.aa1.cn/api/api-girl-11-02/index.php?type=json')
-	    .then(response =>{
-    		return response.json();
-	}).then(json=>{
-		const encode_url = encodeURI(json.mp4)
-		const mm = 'https:'+ encode_url
-		console.log(mm)
-	    	message.say(mm)
-	})
-      return;
-    } else if (rawText === '来点疯狂星期四') {
+    } 	
+// 	  else if (rawText === '好无聊啊') {
+// 	await fetch('https://v.api.aa1.cn/api/api-girl-11-02/index.php?type=json')
+// 	    .then(response =>{
+//     		return response.json();
+// 	}).then(json=>{
+// 		const encode_url = encodeURI(json.mp4)
+// 		const mm ='https://sc1.fun/api.php?url=https:' + json.mp4
+// 		console.log(mm)
+// 	    	message.say(mm)
+// 	})
+//       return;
+//     } 
+	 else if (rawText === '好无聊啊') {
+      		await message.say('何以解忧，唯有哒咩。https://v.api.aa1.cn/api/api-dy-girl/index.php?aa1=ajdu987hrjfw')
+     		return;
+    } 	else if (rawText === '备用接口') {
+      		await message.say('达咩哟，达咩达咩。https://api.shserve.cn/api/xjj?mp4=shanhai')
+     		return;
+    } 
+	else if (rawText === '来点疯狂星期四') {
 	await fetch('https://api.jixs.cc/api/wenan-fkxqs/index.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -356,7 +365,16 @@ export class ChatGPTBot {
 	    	message.say(json[0].kfc)
 	})
       return;
-    } else {
+    } 	else if (rawText === '买家秀') {
+     await fetch('https://api.vvhan.com/api/tao')
+	.then(response =>{
+    		return response.json();
+	}).then(json=>{
+    		console.log(json)
+	    	message.say(FileBox.fromUrl(json))
+	})
+      return;
+    }  else {
     	return
     }
   }
