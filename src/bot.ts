@@ -319,14 +319,14 @@ export class ChatGPTBot {
       await message.say('666')
       return;
     }  else if (rawText === '摸鱼人日历') {
-      fetch('https://udp.qqsuu.cn/apis/moyu.php?type=json')
+     await fetch('https://udp.qqsuu.cn/apis/moyu.php?type=json')
 	.then(response =>{
     		return response.json();
 	}).then(json=>{
     		console.log(json)
-	    
+	    message.say(FileBox.fromUrl(json.data)) 
 	})
-	    await message.say(FileBox.fromUrl(json.data)) 
+	     
       return;
     } else {
       return;
