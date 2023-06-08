@@ -344,7 +344,7 @@ export class ChatGPTBot {
 		const encode_url = encodeURI(json.mp4)
 		const mm = 'https:'+ encode_url
 		console.log(mm)
-	    	message.say(FileBox.fromUrl(mm))
+	    	message.say(mm)
 	})
       return;
     } else if (rawText === '来点疯狂星期四') {
