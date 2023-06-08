@@ -327,7 +327,7 @@ export class ChatGPTBot {
 	    	message.say(FileBox.fromUrl(json.data))
 	})
       return;
-    }else if (rawText === '舔一下') {
+    } else if (rawText === '舔一下') {
 	await fetch('https://api.oick.cn/dog/api.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -336,7 +336,7 @@ export class ChatGPTBot {
 	    	message.say(json)
 	})
       return;
-    }else if (rawText === '好无聊啊') {
+    } else if (rawText === '好无聊啊') {
 	await fetch('https://v.api.aa1.cn/api/api-girl-11-02/index.php?type=json')
 	    .then(response =>{
     		return response.json();
