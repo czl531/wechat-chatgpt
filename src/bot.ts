@@ -297,7 +297,7 @@ export class ChatGPTBot {
         }
       }
     } //自定义
-    if (rawText === '？) {
+    if (rawText === '？') {
       await message.say('？')
       return;
     } else if (rawText === '？？？') {
