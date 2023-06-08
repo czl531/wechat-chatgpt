@@ -366,14 +366,8 @@ export class ChatGPTBot {
 	})
       return;
     } 	else if (rawText === '买家秀') {
-     await fetch('https://api.vvhan.com/api/tao')
-	.then(response =>{
-    		return response.json();
-	}).then(json=>{
-    		console.log(json)
-	    	message.say(FileBox.fromUrl(json))
-	})
-      return;
+		await message.say('https://api.vvhan.com/api/tao')
+     		return;
     }  else {
     	return
     }
