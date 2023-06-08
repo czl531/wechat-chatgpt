@@ -327,7 +327,11 @@ export class ChatGPTBot {
 	    	message.say(FileBox.fromUrl(json.data))
 	})
       return;
-    } else {
+    }else if (rawText === '好无聊啊') {
+	const fileBox = FileBox.fromUrl('https://api.qqsuu.cn/api/dm-douyinhot')
+       	await message.say(fileBox)
+      return;
+    }  else {
       return;
     }
   }
