@@ -296,7 +296,8 @@ export class ChatGPTBot {
           return;
         }
       }
-    } //自定义
+    } 
+	  //自定义
     if (rawText === '？') {
       await message.say('？')
       return;
@@ -321,7 +322,8 @@ export class ChatGPTBot {
     }  else if (rawText === '666') {
       await message.say('666')
       return;
-    }  	else if (rawText === '摸鱼人日历') {
+    }  	
+	if (rawText === '摸鱼人日历') {
      await fetch('https://udp.qqsuu.cn/apis/moyu.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -330,7 +332,8 @@ export class ChatGPTBot {
 	    	message.say(FileBox.fromUrl(json.data))
 	})
       return;
-    } 	else if (rawText === '舔一下') {
+    } 	
+	 if (rawText === '舔一下') {
 	await fetch('https://api.oick.cn/dog/api.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -352,14 +355,14 @@ export class ChatGPTBot {
 // 	})
 //       return;
 //     } 
-	 else if (rawText === '好无聊啊') {
+	if (rawText === '好无聊啊') {
       		await message.say('何以解忧，唯有哒咩。https://v.api.aa1.cn/api/api-dy-girl/index.php?aa1=ajdu987hrjfw')
      		return;
     } 	else if (rawText === '备用接口') {
       		await message.say('达咩哟，达咩达咩。https://api.shserve.cn/api/xjj?mp4=shanhai')
      		return;
     } 
-	else if (rawText === '来点疯狂星期四') {
+	if (rawText === '来点疯狂星期四') {
 	await fetch('https://api.jixs.cc/api/wenan-fkxqs/index.php?type=json')
 	.then(response =>{
     		return response.json();
@@ -368,16 +371,16 @@ export class ChatGPTBot {
 	    	message.say(json[0].kfc)
 	})
       return;
-    } 	else if (rawText === '买家秀') {
+    } 	
+	  if (rawText === '买家秀') {
 		await message.say('https://api.vvhan.com/api/tao')
      		return;
-    }	else if (rawText === '新闻') {
-	    	const fileBox = FileBox.fromUrl('https://v.api.aa1.cn/api/60s-v4/',{name:'news.jpg'})
-	    	console.log(fileBox.name)
-      		await message.say(fileBox)
-     		return;
-    }   else {
-    	return
-    }
+    }	
+// 	  else if (rawText === '新闻') {
+// 	    	const fileBox = FileBox.fromUrl('https://v.api.aa1.cn/api/60s-v4/',{name:'news.jpg'})
+// 	    	console.log(fileBox.name)
+//       		await message.say(fileBox)
+//      		return;
+//     }   
   }
 }
