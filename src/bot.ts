@@ -322,7 +322,13 @@ export class ChatGPTBot {
     }  else if (rawText === '666') {
       await message.say('666')
       return;
-    }  	
+    }  	else if (rawText === '寄了？') {
+      await message.say('没寄')
+      return;
+    } else if (rawText === '辣鸡') {
+      await message.say('辣鸡说谁')
+      return;
+    } 
 	if (rawText === '摸鱼人日历') {
      await fetch('https://udp.qqsuu.cn/apis/moyu.php?type=json')
 	.then(response =>{
