@@ -315,6 +315,9 @@ export class ChatGPTBot {
     } else if (rawText === '6') {
       await message.say('6')
       return;
+    } else if (rawText === '1') {
+      await message.say('2')
+      return;
     }  else if (rawText === '666') {
       await message.say('666')
       return;
@@ -368,7 +371,10 @@ export class ChatGPTBot {
     } 	else if (rawText === '买家秀') {
 		await message.say('https://api.vvhan.com/api/tao')
      		return;
-    }  else {
+    }	else if (rawText === '新闻') {
+      		await message.say(FileBox.fromUrl('https://v.api.aa1.cn/api/60s-v4/'))
+     		return;
+    }   else {
     	return
     }
   }
