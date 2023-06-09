@@ -372,8 +372,7 @@ export class ChatGPTBot {
 		await message.say('https://api.vvhan.com/api/tao')
      		return;
     }	else if (rawText === '新闻') {
-	    	const fileBox = FileBox.fromUrl('https://v.api.aa1.cn/api/60s-v4/')
-		fileBox.name=fileBox.name+'.jpg'
+	    	const fileBox = FileBox.fromUrl('https://v.api.aa1.cn/api/60s-v4/',{name:'news.jpg'})
 	    	console.log(fileBox.name)
       		await message.say(fileBox)
      		return;
